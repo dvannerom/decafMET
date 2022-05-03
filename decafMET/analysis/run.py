@@ -68,8 +68,8 @@ with open(inFile) as json_file:
 			executor=processor.dask_executor,
 			executor_args=exe_args
 		)
-		util.save(result,a+'.coffea')
-		output_root_file = a+'.root'
+		util.save(result,'plots/'+a+'.coffea')
+		output_root_file = 'plots/'+a+'.root'
 
 		elapsed = time.time() - tic
 		print(f"Output: {result}")

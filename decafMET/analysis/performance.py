@@ -18,7 +18,7 @@ import numpy as np
 from dask.distributed import Client
 from dask_jobqueue.htcondor import HTCondorCluster
 
-import gammaJets
+from processor import gammaJets
 
 class performanceProcessor(processor.ProcessorABC):
     def __init__(self):
