@@ -1,0 +1,19 @@
+000 (149034.000.000) 2022-08-08 15:34:57 Job submitted from host: <192.168.10.147:9618?addrs=192.168.10.147-9618&alias=schedd03.wn.iihe.ac.be&noUDP&sock=schedd_29690_72ef>
+    DAG Node: 2018A
+...
+001 (149034.000.000) 2022-08-08 15:35:21 Job executing on host: <192.168.31.4:9618?addrs=192.168.31.4-9618&alias=node31-4.wn.iihe.ac.be&noUDP&sock=startd_2980_9c50>
+...
+004 (149034.000.000) 2022-08-10 18:22:40 Job was evicted.
+	(0) CPU times
+		Usr 0 09:46:08, Sys 0 00:15:02  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.00        1         1 
+	   Disk (KB)            :     1           1    873713 
+	   Memory (MB)          : 31652           1       100 
+...
+009 (149034.000.000) 2022-08-10 18:22:41 Job was aborted.
+	removed because <OtherJobRemoveRequirements = DAGManJobId =?= 149033> fired when job (149033.0) was removed
+...

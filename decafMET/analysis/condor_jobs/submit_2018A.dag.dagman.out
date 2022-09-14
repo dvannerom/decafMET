@@ -1,0 +1,1072 @@
+08/08/22 15:34:56 ******************************************************
+08/08/22 15:34:56 ** condor_scheduniv_exec.149033.0 (CONDOR_DAGMAN) STARTING UP
+08/08/22 15:34:56 ** /usr/bin/condor_dagman
+08/08/22 15:34:56 ** SubsystemInfo: name=DAGMAN type=DAGMAN(10) class=DAEMON(1)
+08/08/22 15:34:56 ** Configuration: subsystem:DAGMAN local:<NONE> class:DAEMON
+08/08/22 15:34:56 ** $CondorVersion: 9.0.12 Apr 19 2022 BuildID: 583935 PackageID: 9.0.12-1 $
+08/08/22 15:34:56 ** $CondorPlatform: x86_64_CentOS7 $
+08/08/22 15:34:56 ** PID = 2584791
+08/08/22 15:34:56 ** Log last touched time unavailable (No such file or directory)
+08/08/22 15:34:56 ******************************************************
+08/08/22 15:34:56 Using config source: /etc/condor/condor_config
+08/08/22 15:34:56 Using local config sources: 
+08/08/22 15:34:56    /etc/condor/config.d/00_config_local.config
+08/08/22 15:34:56    /etc/condor/config.d/01_metaknob_submit.config
+08/08/22 15:34:56    /etc/condor/config.d/05_domains.config
+08/08/22 15:34:56    /etc/condor/config.d/12_resourcelimits.config
+08/08/22 15:34:56    /etc/condor/config.d/20_remote_submit.config
+08/08/22 15:34:56    /etc/condor/config.d/21_schedd.config
+08/08/22 15:34:56    /etc/condor/config.d/23_ganglia.config
+08/08/22 15:34:56    /etc/condor/config.d/60_custom_knobs.config
+08/08/22 15:34:56    /etc/condor/condor_config.local
+08/08/22 15:34:56 config Macros = 117, Sorted = 117, StringBytes = 3988, TablesBytes = 4316
+08/08/22 15:34:56 CLASSAD_CACHING is ENABLED
+08/08/22 15:34:56 Daemon Log is logging: D_ALWAYS D_ERROR
+08/08/22 15:34:56 DaemonCore: No command port requested.
+08/08/22 15:34:56 DAGMAN_USE_STRICT setting: 1
+08/08/22 15:34:56 DAGMAN_VERBOSITY setting: 3
+08/08/22 15:34:56 DAGMAN_DEBUG_CACHE_SIZE setting: 5242880
+08/08/22 15:34:56 DAGMAN_DEBUG_CACHE_ENABLE setting: False
+08/08/22 15:34:56 DAGMAN_SUBMIT_DELAY setting: 0
+08/08/22 15:34:56 DAGMAN_MAX_SUBMIT_ATTEMPTS setting: 6
+08/08/22 15:34:56 DAGMAN_STARTUP_CYCLE_DETECT setting: False
+08/08/22 15:34:56 DAGMAN_MAX_SUBMITS_PER_INTERVAL setting: 100
+08/08/22 15:34:56 DAGMAN_AGGRESSIVE_SUBMIT setting: False
+08/08/22 15:34:56 DAGMAN_USER_LOG_SCAN_INTERVAL setting: 5
+08/08/22 15:34:56 DAGMAN_QUEUE_UPDATE_INTERVAL setting: 300
+08/08/22 15:34:56 DAGMAN_DEFAULT_PRIORITY setting: 0
+08/08/22 15:34:56 DAGMAN_SUPPRESS_NOTIFICATION setting: True
+08/08/22 15:34:56 allow_events (DAGMAN_ALLOW_EVENTS) setting: 114
+08/08/22 15:34:56 DAGMAN_RETRY_SUBMIT_FIRST setting: True
+08/08/22 15:34:56 DAGMAN_RETRY_NODE_FIRST setting: False
+08/08/22 15:34:56 DAGMAN_MAX_JOBS_IDLE setting: 1000
+08/08/22 15:34:56 DAGMAN_MAX_JOBS_SUBMITTED setting: 0
+08/08/22 15:34:56 DAGMAN_MAX_PRE_SCRIPTS setting: 20
+08/08/22 15:34:56 DAGMAN_MAX_POST_SCRIPTS setting: 20
+08/08/22 15:34:56 DAGMAN_MAX_HOLD_SCRIPTS setting: 20
+08/08/22 15:34:56 DAGMAN_MUNGE_NODE_NAMES setting: True
+08/08/22 15:34:56 DAGMAN_PROHIBIT_MULTI_JOBS setting: False
+08/08/22 15:34:56 DAGMAN_SUBMIT_DEPTH_FIRST setting: False
+08/08/22 15:34:56 DAGMAN_ALWAYS_RUN_POST setting: False
+08/08/22 15:34:56 DAGMAN_CONDOR_SUBMIT_EXE setting: /usr/bin/condor_submit
+08/08/22 15:34:56 DAGMAN_USE_CONDOR_SUBMIT setting: True
+08/08/22 15:34:56 DAGMAN_ABORT_DUPLICATES setting: True
+08/08/22 15:34:56 DAGMAN_ABORT_ON_SCARY_SUBMIT setting: True
+08/08/22 15:34:56 DAGMAN_PENDING_REPORT_INTERVAL setting: 600
+08/08/22 15:34:56 DAGMAN_AUTO_RESCUE setting: True
+08/08/22 15:34:56 DAGMAN_MAX_RESCUE_NUM setting: 100
+08/08/22 15:34:56 DAGMAN_WRITE_PARTIAL_RESCUE setting: True
+08/08/22 15:34:56 DAGMAN_DEFAULT_NODE_LOG setting: @(DAG_DIR)/@(DAG_FILE).nodes.log
+08/08/22 15:34:56 DAGMAN_GENERATE_SUBDAG_SUBMITS setting: True
+08/08/22 15:34:56 DAGMAN_MAX_JOB_HOLDS setting: 100
+08/08/22 15:34:56 DAGMAN_HOLD_CLAIM_TIME setting: 20
+08/08/22 15:34:56 ALL_DEBUG setting: 
+08/08/22 15:34:56 DAGMAN_DEBUG setting: 
+08/08/22 15:34:56 DAGMAN_SUPPRESS_JOB_LOGS setting: False
+08/08/22 15:34:56 DAGMAN_REMOVE_NODE_JOBS setting: True
+08/08/22 15:34:56 DAGMAN will adjust edges after parsing
+08/08/22 15:34:56 argv[0] == "condor_scheduniv_exec.149033.0"
+08/08/22 15:34:56 argv[1] == "-Lockfile"
+08/08/22 15:34:56 argv[2] == "condor_jobs/submit_2018A.dag.lock"
+08/08/22 15:34:56 argv[3] == "-AutoRescue"
+08/08/22 15:34:56 argv[4] == "1"
+08/08/22 15:34:56 argv[5] == "-DoRescueFrom"
+08/08/22 15:34:56 argv[6] == "0"
+08/08/22 15:34:56 argv[7] == "-Dag"
+08/08/22 15:34:56 argv[8] == "condor_jobs/submit_2018A.dag"
+08/08/22 15:34:56 argv[9] == "-Suppress_notification"
+08/08/22 15:34:56 argv[10] == "-CsdVersion"
+08/08/22 15:34:56 argv[11] == "$CondorVersion: 9.0.12 Apr 19 2022 BuildID: 583935 PackageID: 9.0.12-1 $"
+08/08/22 15:34:56 argv[12] == "-Dagman"
+08/08/22 15:34:56 argv[13] == "/usr/bin/condor_dagman"
+08/08/22 15:34:56 Can't open directory "/etc/condor/passwords.d" as PRIV_ROOT, errno: 13 (Permission denied)
+08/08/22 15:34:56 Can't open directory "/etc/condor/passwords.d" as PRIV_ROOT, errno: 13 (Permission denied)
+08/08/22 15:34:56 Can't open directory "/user/vannerom/.condor/tokens.d" as PRIV_ROOT, errno: 2 (No such file or directory)
+08/08/22 15:34:56 TOKEN: No token found.
+08/08/22 15:34:56 Workflow batch-id: <149033.0>
+08/08/22 15:34:56 Workflow batch-name: <submit_2018A.dag+149033>
+08/08/22 15:34:56 Workflow accounting_group: <>
+08/08/22 15:34:56 Workflow accounting_group_user: <>
+08/08/22 15:34:56 Warning: failed to get attribute DAGNodeName
+08/08/22 15:34:56 DAGMAN_LOG_ON_NFS_IS_ERROR setting: False
+08/08/22 15:34:56 Default node log file is: </storage_mnt/storage/user/vannerom/MET/decafMET/analysis/condor_jobs/submit_2018A.dag.nodes.log>
+08/08/22 15:34:56 DAG Lockfile will be written to condor_jobs/submit_2018A.dag.lock
+08/08/22 15:34:56 DAG Input file is condor_jobs/submit_2018A.dag
+08/08/22 15:34:56 Parsing 1 dagfiles
+08/08/22 15:34:56 Parsing condor_jobs/submit_2018A.dag ...
+08/08/22 15:34:56 Adjusting edges
+08/08/22 15:34:56 Dag contains 1 total jobs
+08/08/22 15:34:56 Bootstrapping...
+08/08/22 15:34:56 Number of pre-completed nodes: 0
+08/08/22 15:34:56 MultiLogFiles: truncating log file /storage_mnt/storage/user/vannerom/MET/decafMET/analysis/condor_jobs/submit_2018A.dag.nodes.log
+08/08/22 15:34:56 DAG status: 0 (DAG_STATUS_OK)
+08/08/22 15:34:56 Of 1 nodes total:
+08/08/22 15:34:56  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+08/08/22 15:34:56   ===     ===      ===     ===     ===        ===      ===
+08/08/22 15:34:56     0       0        0       0       1          0        0
+08/08/22 15:34:56 0 job proc(s) currently held
+08/08/22 15:34:56 DAGMan Runtime Statistics: [ EventCycleTimeCount = 0.0; EventCycleTimeSum = 0.0; LogProcessCycleTimeCount = 0.0; LogProcessCycleTimeSum = 0.0; SleepCycleTimeCount = 0.0; SleepCycleTimeSum = 0.0; SubmitCycleTimeCount = 0.0; SubmitCycleTimeSum = 0.0; ]
+08/08/22 15:34:56 Registering condor_event_timer...
+08/08/22 15:34:57 Submitting HTCondor Node 2018A job(s)...
+08/08/22 15:34:57 Adding a DAGMan workflow log /storage_mnt/storage/user/vannerom/MET/decafMET/analysis/condor_jobs/submit_2018A.dag.nodes.log
+08/08/22 15:34:57 Masking the events recorded in the DAGMAN workflow log
+08/08/22 15:34:57 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36
+08/08/22 15:34:57 submitting: /usr/bin/condor_submit -a dag_node_name' '=' '2018A -a +DAGManJobId' '=' '149033 -a DAGManJobId' '=' '149033 -batch-name submit_2018A.dag+149033 -batch-id 149033.0 -a submit_event_notes' '=' 'DAG' 'Node:' '2018A -a dagman_log' '=' '/storage_mnt/storage/user/vannerom/MET/decafMET/analysis/condor_jobs/submit_2018A.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27,35,36" -a JOB=2018A -a jsonFile' '=' '/user/vannerom/MET/decafMET/analysis/data/EGamma2018A_noBadFile.json -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a notification' '=' 'never -a +DAGParentNodeNames' '=' '"" /user/vannerom/MET/decafMET/analysis/condor_jobs/submit.condor
+08/08/22 15:34:57 From submit: Submitting job(s).
+08/08/22 15:34:57 From submit: 1 job(s) submitted to cluster 149034.
+08/08/22 15:34:57 From submit: WARNING: the line 'JOB = 2018A' was unused by condor_submit. Is it a typo?
+08/08/22 15:34:57 	assigned HTCondor ID (149034.0.0)
+08/08/22 15:34:57 Just submitted 1 job this cycle...
+08/08/22 15:34:57 DAG status: 0 (DAG_STATUS_OK)
+08/08/22 15:34:57 Of 1 nodes total:
+08/08/22 15:34:57  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+08/08/22 15:34:57   ===     ===      ===     ===     ===        ===      ===
+08/08/22 15:34:57     0       0        1       0       0          0        0
+08/08/22 15:34:57 0 job proc(s) currently held
+08/08/22 15:34:57 DAGMan Runtime Statistics: [ EventCycleTimeCount = 0.0; EventCycleTimeSum = 0.0; LogProcessCycleTimeCount = 0.0; LogProcessCycleTimeSum = 0.0; SleepCycleTimeCount = 0.0; SleepCycleTimeSum = 0.0; SubmitCycleTimeAvg = 0.09484100341796875; SubmitCycleTimeCount = 1.0; SubmitCycleTimeMax = 0.09484100341796875; SubmitCycleTimeMin = 0.09484100341796875; SubmitCycleTimeStd = 0.09484100341796875; SubmitCycleTimeSum = 0.09484100341796875; ]
+08/08/22 15:35:02 Currently monitoring 1 HTCondor log file(s)
+08/08/22 15:35:02 Reassigning the id of job 2018A from (149034.0.0) to (149034.0.0)
+08/08/22 15:35:02 Event: ULOG_SUBMIT for HTCondor Node 2018A (149034.0.0) {08/08/22 15:34:57}
+08/08/22 15:35:02 Number of idle job procs: 1
+08/08/22 15:35:23 Currently monitoring 1 HTCondor log file(s)
+08/08/22 15:35:23 Event: ULOG_EXECUTE for HTCondor Node 2018A (149034.0.0) {08/08/22 15:35:21}
+08/08/22 15:35:23 Number of idle job procs: 0
+08/08/22 15:45:24 601 seconds since last log event
+08/08/22 15:45:24 Pending DAG nodes:
+08/08/22 15:45:24   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 15:55:25 1202 seconds since last log event
+08/08/22 15:55:25 Pending DAG nodes:
+08/08/22 15:55:25   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 16:05:25 1802 seconds since last log event
+08/08/22 16:05:25 Pending DAG nodes:
+08/08/22 16:05:25   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 16:15:27 2404 seconds since last log event
+08/08/22 16:15:27 Pending DAG nodes:
+08/08/22 16:15:27   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 16:25:28 3005 seconds since last log event
+08/08/22 16:25:28 Pending DAG nodes:
+08/08/22 16:25:28   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 16:35:31 3608 seconds since last log event
+08/08/22 16:35:31 Pending DAG nodes:
+08/08/22 16:35:31   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 16:45:34 4211 seconds since last log event
+08/08/22 16:45:34 Pending DAG nodes:
+08/08/22 16:45:34   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 16:55:35 4812 seconds since last log event
+08/08/22 16:55:37 Pending DAG nodes:
+08/08/22 16:55:37   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 17:05:36 5413 seconds since last log event
+08/08/22 17:05:36 Pending DAG nodes:
+08/08/22 17:05:36   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 17:15:37 6014 seconds since last log event
+08/08/22 17:15:37 Pending DAG nodes:
+08/08/22 17:15:37   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 17:25:37 6614 seconds since last log event
+08/08/22 17:25:38 Pending DAG nodes:
+08/08/22 17:25:38   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 17:35:38 7215 seconds since last log event
+08/08/22 17:35:38 Pending DAG nodes:
+08/08/22 17:35:38   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 17:45:42 7819 seconds since last log event
+08/08/22 17:45:43 Pending DAG nodes:
+08/08/22 17:45:43   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 17:55:46 8423 seconds since last log event
+08/08/22 17:55:48 Pending DAG nodes:
+08/08/22 17:55:48   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 18:05:47 9024 seconds since last log event
+08/08/22 18:05:49 Pending DAG nodes:
+08/08/22 18:05:49   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 18:15:51 9628 seconds since last log event
+08/08/22 18:15:51 Pending DAG nodes:
+08/08/22 18:15:51   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 18:25:54 10231 seconds since last log event
+08/08/22 18:25:56 Pending DAG nodes:
+08/08/22 18:25:56   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 18:35:58 10835 seconds since last log event
+08/08/22 18:35:58 Pending DAG nodes:
+08/08/22 18:35:58   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 18:46:02 11439 seconds since last log event
+08/08/22 18:46:04 Pending DAG nodes:
+08/08/22 18:46:04   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 18:56:04 12041 seconds since last log event
+08/08/22 18:56:06 Pending DAG nodes:
+08/08/22 18:56:06   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 19:06:08 12645 seconds since last log event
+08/08/22 19:06:08 Pending DAG nodes:
+08/08/22 19:06:08   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 19:16:11 13248 seconds since last log event
+08/08/22 19:16:13 Pending DAG nodes:
+08/08/22 19:16:13   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 19:26:13 13850 seconds since last log event
+08/08/22 19:26:14 Pending DAG nodes:
+08/08/22 19:26:14   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 19:36:16 14453 seconds since last log event
+08/08/22 19:36:16 Pending DAG nodes:
+08/08/22 19:36:16   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 19:46:18 15055 seconds since last log event
+08/08/22 19:46:18 Pending DAG nodes:
+08/08/22 19:46:18   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 19:56:20 15657 seconds since last log event
+08/08/22 19:56:21 Pending DAG nodes:
+08/08/22 19:56:21   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 20:06:21 16258 seconds since last log event
+08/08/22 20:06:21 Pending DAG nodes:
+08/08/22 20:06:21   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 20:16:21 16858 seconds since last log event
+08/08/22 20:16:21 Pending DAG nodes:
+08/08/22 20:16:21   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 20:26:21 17458 seconds since last log event
+08/08/22 20:26:21 Pending DAG nodes:
+08/08/22 20:26:21   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 20:36:22 18059 seconds since last log event
+08/08/22 20:36:22 Pending DAG nodes:
+08/08/22 20:36:22   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 20:46:26 18663 seconds since last log event
+08/08/22 20:46:26 Pending DAG nodes:
+08/08/22 20:46:26   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 20:56:30 19267 seconds since last log event
+08/08/22 20:56:30 Pending DAG nodes:
+08/08/22 20:56:30   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 21:06:32 19869 seconds since last log event
+08/08/22 21:06:32 Pending DAG nodes:
+08/08/22 21:06:32   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 21:16:33 20470 seconds since last log event
+08/08/22 21:16:33 Pending DAG nodes:
+08/08/22 21:16:33   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 21:26:34 21071 seconds since last log event
+08/08/22 21:26:34 Pending DAG nodes:
+08/08/22 21:26:34   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 21:36:38 21675 seconds since last log event
+08/08/22 21:36:38 Pending DAG nodes:
+08/08/22 21:36:38   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 21:46:41 22278 seconds since last log event
+08/08/22 21:46:42 Pending DAG nodes:
+08/08/22 21:46:42   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 21:56:45 22882 seconds since last log event
+08/08/22 21:56:45 Pending DAG nodes:
+08/08/22 21:56:45   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 22:06:47 23484 seconds since last log event
+08/08/22 22:06:47 Pending DAG nodes:
+08/08/22 22:06:47   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 22:16:49 24086 seconds since last log event
+08/08/22 22:16:50 Pending DAG nodes:
+08/08/22 22:16:50   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 22:26:51 24688 seconds since last log event
+08/08/22 22:26:52 Pending DAG nodes:
+08/08/22 22:26:52   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 22:36:55 25292 seconds since last log event
+08/08/22 22:36:56 Pending DAG nodes:
+08/08/22 22:36:56   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 22:46:55 25892 seconds since last log event
+08/08/22 22:46:55 Pending DAG nodes:
+08/08/22 22:46:55   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 22:56:58 26495 seconds since last log event
+08/08/22 22:56:58 Pending DAG nodes:
+08/08/22 22:56:58   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 23:06:58 27095 seconds since last log event
+08/08/22 23:07:01 Pending DAG nodes:
+08/08/22 23:07:01   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 23:16:59 27696 seconds since last log event
+08/08/22 23:16:59 Pending DAG nodes:
+08/08/22 23:16:59   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 23:27:03 28300 seconds since last log event
+08/08/22 23:27:03 Pending DAG nodes:
+08/08/22 23:27:03   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 23:37:06 28903 seconds since last log event
+08/08/22 23:37:08 Pending DAG nodes:
+08/08/22 23:37:08   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 23:47:07 29504 seconds since last log event
+08/08/22 23:47:07 Pending DAG nodes:
+08/08/22 23:47:07   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/08/22 23:57:07 30104 seconds since last log event
+08/08/22 23:57:08 Pending DAG nodes:
+08/08/22 23:57:08   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 00:07:10 30707 seconds since last log event
+08/09/22 00:07:11 Pending DAG nodes:
+08/09/22 00:07:11   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 00:17:10 31307 seconds since last log event
+08/09/22 00:17:11 Pending DAG nodes:
+08/09/22 00:17:11   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 00:27:12 31909 seconds since last log event
+08/09/22 00:27:12 Pending DAG nodes:
+08/09/22 00:27:12   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 00:37:15 32512 seconds since last log event
+08/09/22 00:37:15 Pending DAG nodes:
+08/09/22 00:37:15   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 00:47:17 33114 seconds since last log event
+08/09/22 00:47:17 Pending DAG nodes:
+08/09/22 00:47:17   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 00:57:18 33715 seconds since last log event
+08/09/22 00:57:18 Pending DAG nodes:
+08/09/22 00:57:18   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 01:07:20 34317 seconds since last log event
+08/09/22 01:07:20 Pending DAG nodes:
+08/09/22 01:07:20   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 01:17:20 34917 seconds since last log event
+08/09/22 01:17:20 Pending DAG nodes:
+08/09/22 01:17:20   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 01:27:20 35517 seconds since last log event
+08/09/22 01:27:20 Pending DAG nodes:
+08/09/22 01:27:20   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 01:37:21 36118 seconds since last log event
+08/09/22 01:37:21 Pending DAG nodes:
+08/09/22 01:37:21   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 01:47:24 36721 seconds since last log event
+08/09/22 01:47:24 Pending DAG nodes:
+08/09/22 01:47:24   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 01:57:24 37321 seconds since last log event
+08/09/22 01:57:24 Pending DAG nodes:
+08/09/22 01:57:24   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 02:07:25 37922 seconds since last log event
+08/09/22 02:07:25 Pending DAG nodes:
+08/09/22 02:07:25   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 02:17:29 38526 seconds since last log event
+08/09/22 02:17:29 Pending DAG nodes:
+08/09/22 02:17:29   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 02:27:32 39129 seconds since last log event
+08/09/22 02:27:33 Pending DAG nodes:
+08/09/22 02:27:33   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 02:37:32 39729 seconds since last log event
+08/09/22 02:37:32 Pending DAG nodes:
+08/09/22 02:37:32   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 02:47:32 40329 seconds since last log event
+08/09/22 02:47:33 Pending DAG nodes:
+08/09/22 02:47:33   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 02:57:32 40929 seconds since last log event
+08/09/22 02:57:32 Pending DAG nodes:
+08/09/22 02:57:32   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 03:07:35 41532 seconds since last log event
+08/09/22 03:07:35 Pending DAG nodes:
+08/09/22 03:07:35   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 03:17:38 42135 seconds since last log event
+08/09/22 03:17:38 Pending DAG nodes:
+08/09/22 03:17:38   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 03:27:41 42738 seconds since last log event
+08/09/22 03:27:41 Pending DAG nodes:
+08/09/22 03:27:41   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 03:37:41 43338 seconds since last log event
+08/09/22 03:37:41 Pending DAG nodes:
+08/09/22 03:37:41   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 03:47:41 43938 seconds since last log event
+08/09/22 03:47:41 Pending DAG nodes:
+08/09/22 03:47:41   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 03:57:45 44542 seconds since last log event
+08/09/22 03:57:45 Pending DAG nodes:
+08/09/22 03:57:45   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 04:07:47 45144 seconds since last log event
+08/09/22 04:07:47 Pending DAG nodes:
+08/09/22 04:07:47   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 04:17:48 45745 seconds since last log event
+08/09/22 04:17:48 Pending DAG nodes:
+08/09/22 04:17:48   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 04:27:50 46347 seconds since last log event
+08/09/22 04:27:50 Pending DAG nodes:
+08/09/22 04:27:50   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 04:37:50 46947 seconds since last log event
+08/09/22 04:37:50 Pending DAG nodes:
+08/09/22 04:37:50   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 04:47:53 47550 seconds since last log event
+08/09/22 04:47:53 Pending DAG nodes:
+08/09/22 04:47:53   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 04:57:53 48150 seconds since last log event
+08/09/22 04:57:53 Pending DAG nodes:
+08/09/22 04:57:53   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 05:07:54 48751 seconds since last log event
+08/09/22 05:07:54 Pending DAG nodes:
+08/09/22 05:07:54   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 05:17:54 49351 seconds since last log event
+08/09/22 05:17:54 Pending DAG nodes:
+08/09/22 05:17:54   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 05:27:57 49954 seconds since last log event
+08/09/22 05:27:57 Pending DAG nodes:
+08/09/22 05:27:57   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 05:37:57 50554 seconds since last log event
+08/09/22 05:37:57 Pending DAG nodes:
+08/09/22 05:37:57   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 05:47:59 51156 seconds since last log event
+08/09/22 05:47:59 Pending DAG nodes:
+08/09/22 05:47:59   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 05:58:02 51759 seconds since last log event
+08/09/22 05:58:02 Pending DAG nodes:
+08/09/22 05:58:02   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 06:08:02 52359 seconds since last log event
+08/09/22 06:08:02 Pending DAG nodes:
+08/09/22 06:08:02   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 06:18:06 52963 seconds since last log event
+08/09/22 06:18:06 Pending DAG nodes:
+08/09/22 06:18:06   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 06:28:09 53566 seconds since last log event
+08/09/22 06:28:09 Pending DAG nodes:
+08/09/22 06:28:09   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 06:38:10 54167 seconds since last log event
+08/09/22 06:38:10 Pending DAG nodes:
+08/09/22 06:38:10   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 06:48:11 54768 seconds since last log event
+08/09/22 06:48:11 Pending DAG nodes:
+08/09/22 06:48:11   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 06:58:11 55368 seconds since last log event
+08/09/22 06:58:11 Pending DAG nodes:
+08/09/22 06:58:11   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 07:08:12 55969 seconds since last log event
+08/09/22 07:08:12 Pending DAG nodes:
+08/09/22 07:08:12   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 07:18:12 56569 seconds since last log event
+08/09/22 07:18:12 Pending DAG nodes:
+08/09/22 07:18:12   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 07:28:13 57170 seconds since last log event
+08/09/22 07:28:13 Pending DAG nodes:
+08/09/22 07:28:13   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 07:38:14 57771 seconds since last log event
+08/09/22 07:38:14 Pending DAG nodes:
+08/09/22 07:38:14   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 07:48:17 58374 seconds since last log event
+08/09/22 07:48:17 Pending DAG nodes:
+08/09/22 07:48:17   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 07:58:17 58974 seconds since last log event
+08/09/22 07:58:17 Pending DAG nodes:
+08/09/22 07:58:17   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 08:08:21 59578 seconds since last log event
+08/09/22 08:08:21 Pending DAG nodes:
+08/09/22 08:08:21   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 08:18:23 60180 seconds since last log event
+08/09/22 08:18:23 Pending DAG nodes:
+08/09/22 08:18:23   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 08:28:24 60781 seconds since last log event
+08/09/22 08:28:26 Pending DAG nodes:
+08/09/22 08:28:26   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 08:38:25 61382 seconds since last log event
+08/09/22 08:38:25 Pending DAG nodes:
+08/09/22 08:38:25   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 08:48:27 61984 seconds since last log event
+08/09/22 08:48:27 Pending DAG nodes:
+08/09/22 08:48:27   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 08:58:27 62584 seconds since last log event
+08/09/22 08:58:27 Pending DAG nodes:
+08/09/22 08:58:27   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 09:08:27 63184 seconds since last log event
+08/09/22 09:08:27 Pending DAG nodes:
+08/09/22 09:08:27   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 09:18:29 63786 seconds since last log event
+08/09/22 09:18:29 Pending DAG nodes:
+08/09/22 09:18:29   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 09:28:32 64389 seconds since last log event
+08/09/22 09:28:32 Pending DAG nodes:
+08/09/22 09:28:32   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 09:38:33 64990 seconds since last log event
+08/09/22 09:38:33 Pending DAG nodes:
+08/09/22 09:38:33   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 09:48:33 65590 seconds since last log event
+08/09/22 09:48:35 Pending DAG nodes:
+08/09/22 09:48:35   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 09:58:36 66193 seconds since last log event
+08/09/22 09:58:37 Pending DAG nodes:
+08/09/22 09:58:37   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 10:08:39 66796 seconds since last log event
+08/09/22 10:08:39 Pending DAG nodes:
+08/09/22 10:08:39   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 10:18:43 67400 seconds since last log event
+08/09/22 10:18:43 Pending DAG nodes:
+08/09/22 10:18:43   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 10:28:46 68003 seconds since last log event
+08/09/22 10:28:46 Pending DAG nodes:
+08/09/22 10:28:46   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 10:38:46 68603 seconds since last log event
+08/09/22 10:38:46 Pending DAG nodes:
+08/09/22 10:38:46   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 10:48:49 69206 seconds since last log event
+08/09/22 10:48:49 Pending DAG nodes:
+08/09/22 10:48:49   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 10:58:53 69810 seconds since last log event
+08/09/22 10:58:53 Pending DAG nodes:
+08/09/22 10:58:53   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 11:08:56 70413 seconds since last log event
+08/09/22 11:08:56 Pending DAG nodes:
+08/09/22 11:08:56   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 11:18:56 71013 seconds since last log event
+08/09/22 11:18:56 Pending DAG nodes:
+08/09/22 11:18:56   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 11:29:00 71617 seconds since last log event
+08/09/22 11:29:00 Pending DAG nodes:
+08/09/22 11:29:00   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 11:39:01 72218 seconds since last log event
+08/09/22 11:39:01 Pending DAG nodes:
+08/09/22 11:39:01   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 11:49:05 72822 seconds since last log event
+08/09/22 11:49:05 Pending DAG nodes:
+08/09/22 11:49:05   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 11:59:09 73426 seconds since last log event
+08/09/22 11:59:09 Pending DAG nodes:
+08/09/22 11:59:09   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 12:09:13 74030 seconds since last log event
+08/09/22 12:09:13 Pending DAG nodes:
+08/09/22 12:09:13   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 12:19:16 74633 seconds since last log event
+08/09/22 12:19:16 Pending DAG nodes:
+08/09/22 12:19:16   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 12:29:18 75235 seconds since last log event
+08/09/22 12:29:18 Pending DAG nodes:
+08/09/22 12:29:18   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 12:39:20 75837 seconds since last log event
+08/09/22 12:39:20 Pending DAG nodes:
+08/09/22 12:39:20   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 12:49:23 76440 seconds since last log event
+08/09/22 12:49:23 Pending DAG nodes:
+08/09/22 12:49:23   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 12:59:25 77042 seconds since last log event
+08/09/22 12:59:25 Pending DAG nodes:
+08/09/22 12:59:25   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 13:09:25 77642 seconds since last log event
+08/09/22 13:09:25 Pending DAG nodes:
+08/09/22 13:09:25   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 13:19:27 78244 seconds since last log event
+08/09/22 13:19:27 Pending DAG nodes:
+08/09/22 13:19:27   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 13:29:28 78845 seconds since last log event
+08/09/22 13:29:28 Pending DAG nodes:
+08/09/22 13:29:28   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 13:39:31 79448 seconds since last log event
+08/09/22 13:39:31 Pending DAG nodes:
+08/09/22 13:39:31   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 13:49:31 80048 seconds since last log event
+08/09/22 13:49:31 Pending DAG nodes:
+08/09/22 13:49:31   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 13:59:34 80651 seconds since last log event
+08/09/22 13:59:34 Pending DAG nodes:
+08/09/22 13:59:34   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 14:09:34 81251 seconds since last log event
+08/09/22 14:09:34 Pending DAG nodes:
+08/09/22 14:09:34   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 14:19:38 81855 seconds since last log event
+08/09/22 14:19:38 Pending DAG nodes:
+08/09/22 14:19:38   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 14:29:38 82455 seconds since last log event
+08/09/22 14:29:38 Pending DAG nodes:
+08/09/22 14:29:38   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 14:39:40 83057 seconds since last log event
+08/09/22 14:39:40 Pending DAG nodes:
+08/09/22 14:39:40   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 14:49:40 83657 seconds since last log event
+08/09/22 14:49:41 Pending DAG nodes:
+08/09/22 14:49:41   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 14:59:41 84258 seconds since last log event
+08/09/22 14:59:41 Pending DAG nodes:
+08/09/22 14:59:41   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 15:09:44 84861 seconds since last log event
+08/09/22 15:09:44 Pending DAG nodes:
+08/09/22 15:09:44   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 15:19:44 85461 seconds since last log event
+08/09/22 15:19:44 Pending DAG nodes:
+08/09/22 15:19:44   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 15:29:46 86063 seconds since last log event
+08/09/22 15:29:46 Pending DAG nodes:
+08/09/22 15:29:46   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 15:35:17 Can't open directory "/etc/condor/passwords.d" as PRIV_ROOT, errno: 13 (Permission denied)
+08/09/22 15:35:17 Can't open directory "/etc/condor/passwords.d" as PRIV_ROOT, errno: 13 (Permission denied)
+08/09/22 15:35:17 Can't open directory "/user/vannerom/.condor/tokens.d" as PRIV_ROOT, errno: 2 (No such file or directory)
+08/09/22 15:35:17 TOKEN: No token found.
+08/09/22 15:39:48 86665 seconds since last log event
+08/09/22 15:39:48 Pending DAG nodes:
+08/09/22 15:39:48   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 15:49:51 87268 seconds since last log event
+08/09/22 15:49:51 Pending DAG nodes:
+08/09/22 15:49:51   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 15:59:52 87869 seconds since last log event
+08/09/22 15:59:52 Pending DAG nodes:
+08/09/22 15:59:52   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 16:09:56 88473 seconds since last log event
+08/09/22 16:09:57 Pending DAG nodes:
+08/09/22 16:09:57   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 16:19:57 89074 seconds since last log event
+08/09/22 16:19:57 Pending DAG nodes:
+08/09/22 16:19:57   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 16:29:57 89674 seconds since last log event
+08/09/22 16:29:57 Pending DAG nodes:
+08/09/22 16:29:57   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 16:39:59 90276 seconds since last log event
+08/09/22 16:39:59 Pending DAG nodes:
+08/09/22 16:39:59   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 16:50:01 90878 seconds since last log event
+08/09/22 16:50:01 Pending DAG nodes:
+08/09/22 16:50:01   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 17:00:03 91480 seconds since last log event
+08/09/22 17:00:03 Pending DAG nodes:
+08/09/22 17:00:03   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 17:10:04 92081 seconds since last log event
+08/09/22 17:10:04 Pending DAG nodes:
+08/09/22 17:10:04   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 17:20:07 92684 seconds since last log event
+08/09/22 17:20:07 Pending DAG nodes:
+08/09/22 17:20:07   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 17:30:07 93284 seconds since last log event
+08/09/22 17:30:08 Pending DAG nodes:
+08/09/22 17:30:08   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 17:40:10 93887 seconds since last log event
+08/09/22 17:40:10 Pending DAG nodes:
+08/09/22 17:40:10   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 17:50:10 94487 seconds since last log event
+08/09/22 17:50:10 Pending DAG nodes:
+08/09/22 17:50:10   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 18:00:14 95091 seconds since last log event
+08/09/22 18:00:14 Pending DAG nodes:
+08/09/22 18:00:14   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 18:10:16 95693 seconds since last log event
+08/09/22 18:10:16 Pending DAG nodes:
+08/09/22 18:10:16   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 18:20:17 96294 seconds since last log event
+08/09/22 18:20:17 Pending DAG nodes:
+08/09/22 18:20:17   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 18:30:19 96896 seconds since last log event
+08/09/22 18:30:20 Pending DAG nodes:
+08/09/22 18:30:20   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 18:40:19 97496 seconds since last log event
+08/09/22 18:40:19 Pending DAG nodes:
+08/09/22 18:40:19   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 18:50:20 98097 seconds since last log event
+08/09/22 18:50:20 Pending DAG nodes:
+08/09/22 18:50:20   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 19:00:22 98699 seconds since last log event
+08/09/22 19:00:22 Pending DAG nodes:
+08/09/22 19:00:22   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 19:10:22 99299 seconds since last log event
+08/09/22 19:10:22 Pending DAG nodes:
+08/09/22 19:10:22   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 19:20:25 99902 seconds since last log event
+08/09/22 19:20:26 Pending DAG nodes:
+08/09/22 19:20:26   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 19:30:26 100503 seconds since last log event
+08/09/22 19:30:26 Pending DAG nodes:
+08/09/22 19:30:26   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 19:40:27 101104 seconds since last log event
+08/09/22 19:40:27 Pending DAG nodes:
+08/09/22 19:40:27   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 19:50:31 101708 seconds since last log event
+08/09/22 19:50:31 Pending DAG nodes:
+08/09/22 19:50:31   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 20:00:35 102312 seconds since last log event
+08/09/22 20:00:35 Pending DAG nodes:
+08/09/22 20:00:35   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 20:10:36 102913 seconds since last log event
+08/09/22 20:10:37 Pending DAG nodes:
+08/09/22 20:10:37   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 20:20:38 103515 seconds since last log event
+08/09/22 20:20:38 Pending DAG nodes:
+08/09/22 20:20:38   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 20:30:42 104119 seconds since last log event
+08/09/22 20:30:43 Pending DAG nodes:
+08/09/22 20:30:43   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 20:40:43 104720 seconds since last log event
+08/09/22 20:40:43 Pending DAG nodes:
+08/09/22 20:40:43   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 20:50:44 105321 seconds since last log event
+08/09/22 20:50:44 Pending DAG nodes:
+08/09/22 20:50:44   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 21:00:44 105921 seconds since last log event
+08/09/22 21:00:46 Pending DAG nodes:
+08/09/22 21:00:46   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 21:10:44 106521 seconds since last log event
+08/09/22 21:10:44 Pending DAG nodes:
+08/09/22 21:10:44   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 21:20:47 107124 seconds since last log event
+08/09/22 21:20:47 Pending DAG nodes:
+08/09/22 21:20:47   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 21:30:51 107728 seconds since last log event
+08/09/22 21:30:51 Pending DAG nodes:
+08/09/22 21:30:51   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 21:40:55 108332 seconds since last log event
+08/09/22 21:40:55 Pending DAG nodes:
+08/09/22 21:40:55   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 21:50:56 108933 seconds since last log event
+08/09/22 21:50:56 Pending DAG nodes:
+08/09/22 21:50:56   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 22:00:56 109533 seconds since last log event
+08/09/22 22:00:56 Pending DAG nodes:
+08/09/22 22:00:56   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 22:10:59 110136 seconds since last log event
+08/09/22 22:10:59 Pending DAG nodes:
+08/09/22 22:10:59   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 22:21:00 110737 seconds since last log event
+08/09/22 22:21:00 Pending DAG nodes:
+08/09/22 22:21:00   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 22:31:00 111337 seconds since last log event
+08/09/22 22:31:01 Pending DAG nodes:
+08/09/22 22:31:01   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 22:41:01 111938 seconds since last log event
+08/09/22 22:41:02 Pending DAG nodes:
+08/09/22 22:41:02   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 22:51:05 112542 seconds since last log event
+08/09/22 22:51:05 Pending DAG nodes:
+08/09/22 22:51:05   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 23:01:08 113145 seconds since last log event
+08/09/22 23:01:10 Pending DAG nodes:
+08/09/22 23:01:10   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 23:11:12 113749 seconds since last log event
+08/09/22 23:11:14 Pending DAG nodes:
+08/09/22 23:11:14   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 23:21:14 114351 seconds since last log event
+08/09/22 23:21:14 Pending DAG nodes:
+08/09/22 23:21:14   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 23:31:18 114955 seconds since last log event
+08/09/22 23:31:18 Pending DAG nodes:
+08/09/22 23:31:18   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 23:41:21 115558 seconds since last log event
+08/09/22 23:41:21 Pending DAG nodes:
+08/09/22 23:41:21   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/09/22 23:51:23 116160 seconds since last log event
+08/09/22 23:51:23 Pending DAG nodes:
+08/09/22 23:51:23   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 00:01:24 116761 seconds since last log event
+08/10/22 00:01:24 Pending DAG nodes:
+08/10/22 00:01:24   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 00:11:24 117361 seconds since last log event
+08/10/22 00:11:24 Pending DAG nodes:
+08/10/22 00:11:24   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 00:21:27 117964 seconds since last log event
+08/10/22 00:21:27 Pending DAG nodes:
+08/10/22 00:21:27   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 00:31:30 118567 seconds since last log event
+08/10/22 00:31:30 Pending DAG nodes:
+08/10/22 00:31:30   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 00:41:33 119170 seconds since last log event
+08/10/22 00:41:33 Pending DAG nodes:
+08/10/22 00:41:33   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 00:51:37 119774 seconds since last log event
+08/10/22 00:51:37 Pending DAG nodes:
+08/10/22 00:51:37   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 01:01:40 120377 seconds since last log event
+08/10/22 01:01:40 Pending DAG nodes:
+08/10/22 01:01:40   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 01:11:42 120979 seconds since last log event
+08/10/22 01:11:42 Pending DAG nodes:
+08/10/22 01:11:42   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 01:21:43 121580 seconds since last log event
+08/10/22 01:21:43 Pending DAG nodes:
+08/10/22 01:21:43   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 01:31:43 122180 seconds since last log event
+08/10/22 01:31:43 Pending DAG nodes:
+08/10/22 01:31:43   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 01:41:43 122780 seconds since last log event
+08/10/22 01:41:43 Pending DAG nodes:
+08/10/22 01:41:43   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 01:51:47 123384 seconds since last log event
+08/10/22 01:51:47 Pending DAG nodes:
+08/10/22 01:51:47   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 02:01:48 123985 seconds since last log event
+08/10/22 02:01:48 Pending DAG nodes:
+08/10/22 02:01:48   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 02:11:51 124588 seconds since last log event
+08/10/22 02:11:51 Pending DAG nodes:
+08/10/22 02:11:51   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 02:21:54 125191 seconds since last log event
+08/10/22 02:21:54 Pending DAG nodes:
+08/10/22 02:21:54   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 02:31:55 125792 seconds since last log event
+08/10/22 02:31:55 Pending DAG nodes:
+08/10/22 02:31:55   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 02:41:58 126395 seconds since last log event
+08/10/22 02:41:58 Pending DAG nodes:
+08/10/22 02:41:58   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 02:52:00 126997 seconds since last log event
+08/10/22 02:52:00 Pending DAG nodes:
+08/10/22 02:52:00   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 03:02:02 127599 seconds since last log event
+08/10/22 03:02:02 Pending DAG nodes:
+08/10/22 03:02:02   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 03:12:03 128200 seconds since last log event
+08/10/22 03:12:03 Pending DAG nodes:
+08/10/22 03:12:03   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 03:22:06 128803 seconds since last log event
+08/10/22 03:22:06 Pending DAG nodes:
+08/10/22 03:22:06   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 03:32:09 129406 seconds since last log event
+08/10/22 03:32:09 Pending DAG nodes:
+08/10/22 03:32:09   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 03:42:11 130008 seconds since last log event
+08/10/22 03:42:11 Pending DAG nodes:
+08/10/22 03:42:11   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 03:52:15 130612 seconds since last log event
+08/10/22 03:52:15 Pending DAG nodes:
+08/10/22 03:52:15   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 04:02:15 131212 seconds since last log event
+08/10/22 04:02:15 Pending DAG nodes:
+08/10/22 04:02:15   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 04:12:18 131815 seconds since last log event
+08/10/22 04:12:18 Pending DAG nodes:
+08/10/22 04:12:18   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 04:22:22 132419 seconds since last log event
+08/10/22 04:22:22 Pending DAG nodes:
+08/10/22 04:22:22   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 04:32:26 133023 seconds since last log event
+08/10/22 04:32:26 Pending DAG nodes:
+08/10/22 04:32:26   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 04:42:30 133627 seconds since last log event
+08/10/22 04:42:30 Pending DAG nodes:
+08/10/22 04:42:30   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 04:52:31 134228 seconds since last log event
+08/10/22 04:52:32 Pending DAG nodes:
+08/10/22 04:52:32   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 05:02:35 134832 seconds since last log event
+08/10/22 05:02:35 Pending DAG nodes:
+08/10/22 05:02:35   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 05:12:39 135436 seconds since last log event
+08/10/22 05:12:39 Pending DAG nodes:
+08/10/22 05:12:39   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 05:22:42 136039 seconds since last log event
+08/10/22 05:22:42 Pending DAG nodes:
+08/10/22 05:22:42   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 05:32:43 136640 seconds since last log event
+08/10/22 05:32:43 Pending DAG nodes:
+08/10/22 05:32:43   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 05:42:44 137241 seconds since last log event
+08/10/22 05:42:45 Pending DAG nodes:
+08/10/22 05:42:45   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 05:52:46 137843 seconds since last log event
+08/10/22 05:52:46 Pending DAG nodes:
+08/10/22 05:52:46   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 06:02:47 138444 seconds since last log event
+08/10/22 06:02:47 Pending DAG nodes:
+08/10/22 06:02:47   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 06:12:47 139044 seconds since last log event
+08/10/22 06:12:47 Pending DAG nodes:
+08/10/22 06:12:47   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 06:22:51 139648 seconds since last log event
+08/10/22 06:22:51 Pending DAG nodes:
+08/10/22 06:22:51   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 06:32:54 140251 seconds since last log event
+08/10/22 06:32:54 Pending DAG nodes:
+08/10/22 06:32:54   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 06:42:57 140854 seconds since last log event
+08/10/22 06:42:57 Pending DAG nodes:
+08/10/22 06:42:57   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 06:52:57 141454 seconds since last log event
+08/10/22 06:52:57 Pending DAG nodes:
+08/10/22 06:52:57   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 07:03:01 142058 seconds since last log event
+08/10/22 07:03:01 Pending DAG nodes:
+08/10/22 07:03:01   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 07:13:03 142660 seconds since last log event
+08/10/22 07:13:03 Pending DAG nodes:
+08/10/22 07:13:03   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 07:23:07 143264 seconds since last log event
+08/10/22 07:23:07 Pending DAG nodes:
+08/10/22 07:23:07   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 07:33:10 143867 seconds since last log event
+08/10/22 07:33:10 Pending DAG nodes:
+08/10/22 07:33:10   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 07:43:14 144471 seconds since last log event
+08/10/22 07:43:14 Pending DAG nodes:
+08/10/22 07:43:14   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 07:53:18 145075 seconds since last log event
+08/10/22 07:53:18 Pending DAG nodes:
+08/10/22 07:53:18   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 08:03:20 145677 seconds since last log event
+08/10/22 08:03:20 Pending DAG nodes:
+08/10/22 08:03:20   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 08:13:24 146281 seconds since last log event
+08/10/22 08:13:24 Pending DAG nodes:
+08/10/22 08:13:24   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 08:23:28 146885 seconds since last log event
+08/10/22 08:23:28 Pending DAG nodes:
+08/10/22 08:23:28   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 08:33:30 147487 seconds since last log event
+08/10/22 08:33:30 Pending DAG nodes:
+08/10/22 08:33:30   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 08:43:32 148089 seconds since last log event
+08/10/22 08:43:32 Pending DAG nodes:
+08/10/22 08:43:32   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 08:53:34 148691 seconds since last log event
+08/10/22 08:53:34 Pending DAG nodes:
+08/10/22 08:53:34   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 09:03:35 149292 seconds since last log event
+08/10/22 09:03:35 Pending DAG nodes:
+08/10/22 09:03:35   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 09:13:38 149895 seconds since last log event
+08/10/22 09:13:38 Pending DAG nodes:
+08/10/22 09:13:38   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 09:23:41 150498 seconds since last log event
+08/10/22 09:23:43 Pending DAG nodes:
+08/10/22 09:23:43   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 09:33:41 151098 seconds since last log event
+08/10/22 09:33:41 Pending DAG nodes:
+08/10/22 09:33:41   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 09:43:45 151702 seconds since last log event
+08/10/22 09:43:45 Pending DAG nodes:
+08/10/22 09:43:45   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 09:53:47 152304 seconds since last log event
+08/10/22 09:53:47 Pending DAG nodes:
+08/10/22 09:53:47   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 10:03:48 152905 seconds since last log event
+08/10/22 10:03:48 Pending DAG nodes:
+08/10/22 10:03:48   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 10:13:51 153508 seconds since last log event
+08/10/22 10:13:51 Pending DAG nodes:
+08/10/22 10:13:51   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 10:23:52 154109 seconds since last log event
+08/10/22 10:23:52 Pending DAG nodes:
+08/10/22 10:23:52   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 10:33:56 154713 seconds since last log event
+08/10/22 10:33:56 Pending DAG nodes:
+08/10/22 10:33:56   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 10:44:00 155317 seconds since last log event
+08/10/22 10:44:00 Pending DAG nodes:
+08/10/22 10:44:00   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 10:54:01 155918 seconds since last log event
+08/10/22 10:54:01 Pending DAG nodes:
+08/10/22 10:54:01   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 11:04:01 156518 seconds since last log event
+08/10/22 11:04:01 Pending DAG nodes:
+08/10/22 11:04:01   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 11:14:01 157118 seconds since last log event
+08/10/22 11:14:01 Pending DAG nodes:
+08/10/22 11:14:01   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 11:24:04 157721 seconds since last log event
+08/10/22 11:24:04 Pending DAG nodes:
+08/10/22 11:24:04   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 11:34:04 158321 seconds since last log event
+08/10/22 11:34:04 Pending DAG nodes:
+08/10/22 11:34:04   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 11:44:05 158922 seconds since last log event
+08/10/22 11:44:05 Pending DAG nodes:
+08/10/22 11:44:05   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 11:54:05 159522 seconds since last log event
+08/10/22 11:54:05 Pending DAG nodes:
+08/10/22 11:54:05   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 12:04:06 160123 seconds since last log event
+08/10/22 12:04:06 Pending DAG nodes:
+08/10/22 12:04:06   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 12:14:07 160724 seconds since last log event
+08/10/22 12:14:07 Pending DAG nodes:
+08/10/22 12:14:07   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 12:24:10 161327 seconds since last log event
+08/10/22 12:24:10 Pending DAG nodes:
+08/10/22 12:24:10   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 12:34:12 161929 seconds since last log event
+08/10/22 12:34:12 Pending DAG nodes:
+08/10/22 12:34:12   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 12:44:12 162529 seconds since last log event
+08/10/22 12:44:12 Pending DAG nodes:
+08/10/22 12:44:12   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 12:54:13 163130 seconds since last log event
+08/10/22 12:54:13 Pending DAG nodes:
+08/10/22 12:54:13   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 13:04:13 163730 seconds since last log event
+08/10/22 13:04:13 Pending DAG nodes:
+08/10/22 13:04:13   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 13:14:15 164332 seconds since last log event
+08/10/22 13:14:15 Pending DAG nodes:
+08/10/22 13:14:15   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 13:24:16 164933 seconds since last log event
+08/10/22 13:24:16 Pending DAG nodes:
+08/10/22 13:24:16   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 13:34:20 165537 seconds since last log event
+08/10/22 13:34:20 Pending DAG nodes:
+08/10/22 13:34:20   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 13:44:23 166140 seconds since last log event
+08/10/22 13:44:23 Pending DAG nodes:
+08/10/22 13:44:23   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 13:54:25 166742 seconds since last log event
+08/10/22 13:54:26 Pending DAG nodes:
+08/10/22 13:54:26   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 14:04:29 167346 seconds since last log event
+08/10/22 14:04:29 Pending DAG nodes:
+08/10/22 14:04:29   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 14:14:33 167950 seconds since last log event
+08/10/22 14:14:33 Pending DAG nodes:
+08/10/22 14:14:33   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 14:24:34 168551 seconds since last log event
+08/10/22 14:24:34 Pending DAG nodes:
+08/10/22 14:24:34   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 14:34:34 169151 seconds since last log event
+08/10/22 14:34:34 Pending DAG nodes:
+08/10/22 14:34:34   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 14:44:36 169753 seconds since last log event
+08/10/22 14:44:36 Pending DAG nodes:
+08/10/22 14:44:36   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 14:54:40 170357 seconds since last log event
+08/10/22 14:54:40 Pending DAG nodes:
+08/10/22 14:54:40   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 15:04:42 170959 seconds since last log event
+08/10/22 15:04:42 Pending DAG nodes:
+08/10/22 15:04:42   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 15:14:46 171563 seconds since last log event
+08/10/22 15:14:46 Pending DAG nodes:
+08/10/22 15:14:46   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 15:24:46 172163 seconds since last log event
+08/10/22 15:24:46 Pending DAG nodes:
+08/10/22 15:24:46   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 15:34:47 172764 seconds since last log event
+08/10/22 15:34:47 Pending DAG nodes:
+08/10/22 15:34:47   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 15:35:57 Can't open directory "/etc/condor/passwords.d" as PRIV_ROOT, errno: 13 (Permission denied)
+08/10/22 15:35:57 Can't open directory "/etc/condor/passwords.d" as PRIV_ROOT, errno: 13 (Permission denied)
+08/10/22 15:35:57 Can't open directory "/user/vannerom/.condor/tokens.d" as PRIV_ROOT, errno: 2 (No such file or directory)
+08/10/22 15:35:57 TOKEN: No token found.
+08/10/22 15:44:49 173366 seconds since last log event
+08/10/22 15:44:49 Pending DAG nodes:
+08/10/22 15:44:49   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 15:54:49 173966 seconds since last log event
+08/10/22 15:54:49 Pending DAG nodes:
+08/10/22 15:54:49   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 16:04:50 174567 seconds since last log event
+08/10/22 16:04:50 Pending DAG nodes:
+08/10/22 16:04:50   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 16:14:51 175168 seconds since last log event
+08/10/22 16:14:51 Pending DAG nodes:
+08/10/22 16:14:51   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 16:24:53 175770 seconds since last log event
+08/10/22 16:24:53 Pending DAG nodes:
+08/10/22 16:24:53   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 16:34:54 176371 seconds since last log event
+08/10/22 16:34:54 Pending DAG nodes:
+08/10/22 16:34:54   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 16:44:56 176973 seconds since last log event
+08/10/22 16:44:56 Pending DAG nodes:
+08/10/22 16:44:56   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 16:54:57 177574 seconds since last log event
+08/10/22 16:54:57 Pending DAG nodes:
+08/10/22 16:54:57   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 17:04:59 178176 seconds since last log event
+08/10/22 17:04:59 Pending DAG nodes:
+08/10/22 17:04:59   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 17:14:59 178776 seconds since last log event
+08/10/22 17:14:59 Pending DAG nodes:
+08/10/22 17:14:59   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 17:25:00 179377 seconds since last log event
+08/10/22 17:25:00 Pending DAG nodes:
+08/10/22 17:25:00   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 17:35:03 179980 seconds since last log event
+08/10/22 17:35:03 Pending DAG nodes:
+08/10/22 17:35:03   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 17:45:06 180583 seconds since last log event
+08/10/22 17:45:06 Pending DAG nodes:
+08/10/22 17:45:06   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 17:55:08 181185 seconds since last log event
+08/10/22 17:55:08 Pending DAG nodes:
+08/10/22 17:55:08   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 18:05:12 181789 seconds since last log event
+08/10/22 18:05:12 Pending DAG nodes:
+08/10/22 18:05:12   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 18:15:17 182394 seconds since last log event
+08/10/22 18:15:18 Pending DAG nodes:
+08/10/22 18:15:18   Node 2018A, HTCondor ID 149034, status STATUS_SUBMITTED
+08/10/22 18:22:40 Received SIGUSR1
+08/10/22 18:22:40 Aborting DAG...
+08/10/22 18:22:40 Writing Rescue DAG to condor_jobs/submit_2018A.dag.rescue001...
+08/10/22 18:22:40 Removing submitted jobs...
+08/10/22 18:22:40 Removing any/all submitted HTCondor jobs...
+08/10/22 18:22:40 Running: /usr/bin/condor_rm -const DAGManJobId==149033
+08/10/22 18:22:40 Note: 0 total job deferrals because of -MaxJobs limit (0)
+08/10/22 18:22:40 Note: 0 total job deferrals because of -MaxIdle limit (1000)
+08/10/22 18:22:40 Note: 0 total job deferrals because of node category throttles
+08/10/22 18:22:40 Note: 0 total PRE script deferrals because of -MaxPre limit (20) or DEFER
+08/10/22 18:22:40 Note: 0 total POST script deferrals because of -MaxPost limit (20) or DEFER
+08/10/22 18:22:40 Note: 0 total HOLD script deferrals because of -MaxHold limit (20) or DEFER
+08/10/22 18:22:40 DAG status: 4 (DAG_STATUS_RM)
+08/10/22 18:22:40 Of 1 nodes total:
+08/10/22 18:22:40  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+08/10/22 18:22:40   ===     ===      ===     ===     ===        ===      ===
+08/10/22 18:22:40     0       0        1       0       0          0        0
+08/10/22 18:22:40 0 job proc(s) currently held
+08/10/22 18:22:40 DAGMan Runtime Statistics: [ EventCycleTimeAvg = 0.06497071246647229; EventCycleTimeCount = 35994.0; EventCycleTimeMax = 33.47738218307495; EventCycleTimeMin = 2.09808349609375E-05; EventCycleTimeStd = 0.378216997594265; EventCycleTimeSum = 2338.555824518204; LogProcessCycleTimeAvg = 0.0005270242691040039; LogProcessCycleTimeCount = 2.0; LogProcessCycleTimeMax = 0.0006229877471923828; LogProcessCycleTimeMin = 0.000431060791015625; LogProcessCycleTimeStd = 0.0001357128522050788; LogProcessCycleTimeSum = 0.001054048538208008; SleepCycleTimeAvg = 5.015411667886985; SleepCycleTimeCount = 35993.0; SleepCycleTimeMax = 11.55610609054565; SleepCycleTimeMin = 4.00360107421875; SleepCycleTimeStd = 0.1568156940479009; SleepCycleTimeSum = 180519.7121622562; SubmitCycleTimeAvg = 0.03577662059424446; SubmitCycleTimeCount = 35994.0; SubmitCycleTimeMax = 3.80262303352356; SubmitCycleTimeMin = 8.821487426757812E-06; SubmitCycleTimeStd = 0.2451764898167886; SubmitCycleTimeSum = 1287.743681669235; ]
+08/10/22 18:22:40 Wrote metrics file condor_jobs/submit_2018A.dag.metrics.
+08/10/22 18:22:40 DAGMan Runtime Statistics: [ EventCycleTimeAvg = 0.06497071246647229; EventCycleTimeCount = 35994.0; EventCycleTimeMax = 33.47738218307495; EventCycleTimeMin = 2.09808349609375E-05; EventCycleTimeStd = 0.378216997594265; EventCycleTimeSum = 2338.555824518204; LogProcessCycleTimeAvg = 0.0005270242691040039; LogProcessCycleTimeCount = 2.0; LogProcessCycleTimeMax = 0.0006229877471923828; LogProcessCycleTimeMin = 0.000431060791015625; LogProcessCycleTimeStd = 0.0001357128522050788; LogProcessCycleTimeSum = 0.001054048538208008; SleepCycleTimeAvg = 5.015411667886985; SleepCycleTimeCount = 35993.0; SleepCycleTimeMax = 11.55610609054565; SleepCycleTimeMin = 4.00360107421875; SleepCycleTimeStd = 0.1568156940479009; SleepCycleTimeSum = 180519.7121622562; SubmitCycleTimeAvg = 0.03577662059424446; SubmitCycleTimeCount = 35994.0; SubmitCycleTimeMax = 3.80262303352356; SubmitCycleTimeMin = 8.821487426757812E-06; SubmitCycleTimeStd = 0.2451764898167886; SubmitCycleTimeSum = 1287.743681669235; ]
+08/10/22 18:22:40 **** condor_scheduniv_exec.149033.0 (condor_DAGMAN) pid 2584791 EXITING WITH STATUS 2

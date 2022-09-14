@@ -1,0 +1,70 @@
+Contacting voms-cms-auth.app.cern.ch:443 [/DC=ch/DC=cern/OU=computers/CN=cms-auth.web.cern.ch] "cms"...
+Remote VOMS server contacted succesfully.
+
+
+Created proxy in /tmp/x509up_u20636.
+
+Your proxy is valid until Sun Aug 14 11:35:27 CEST 2022
+Requirement already satisfied: coffea==0.7.14 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (0.7.14)
+Requirement already satisfied: awkward<2,>=1.5.1 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (1.8.0)
+Requirement already satisfied: hist>=2 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (2.4.0)
+Requirement already satisfied: pandas in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from coffea==0.7.14) (0.24.2)
+Requirement already satisfied: typing-extensions; python_version < "3.8" in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (4.1.1)
+Requirement already satisfied: dataclasses; python_version < "3.7" in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (0.8)
+Requirement already satisfied: numpy<1.22,>=1.16.0 in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from coffea==0.7.14) (1.16.4)
+Requirement already satisfied: uproot3>=3.14.1 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (3.14.4)
+Requirement already satisfied: pyarrow>=1.0.0 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (6.0.1)
+Requirement already satisfied: toml>=0.10.2 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (0.10.2)
+Requirement already satisfied: cloudpickle>=1.2.3 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (2.0.0)
+Requirement already satisfied: correctionlib>=2.0.0 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (2.1.0)
+Requirement already satisfied: uproot3-methods>=0.10.0 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (0.10.1)
+Requirement already satisfied: matplotlib>=3 in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from coffea==0.7.14) (3.1.0)
+Requirement already satisfied: uproot>=4.1.6 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (4.2.2)
+Requirement already satisfied: scipy>=1.1.0 in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from coffea==0.7.14) (1.3.0)
+Requirement already satisfied: tqdm>=4.27.0 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (4.64.0)
+Requirement already satisfied: cachetools in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from coffea==0.7.14) (3.1.1)
+Requirement already satisfied: numba>=0.50.0 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (0.53.1)
+Requirement already satisfied: mplhep>=0.1.18 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (0.2.18)
+Requirement already satisfied: fsspec in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (2022.1.0)
+Requirement already satisfied: packaging in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from coffea==0.7.14) (19.0)
+Requirement already satisfied: lz4 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from coffea==0.7.14) (3.1.10)
+Requirement already satisfied: setuptools in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from awkward<2,>=1.5.1->coffea==0.7.14) (41.0.0.post20190615)
+Requirement already satisfied: histoprint>=1.6 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from hist>=2->coffea==0.7.14) (2.2.1)
+Requirement already satisfied: boost-histogram~=1.1.0 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from hist>=2->coffea==0.7.14) (1.1.0)
+Requirement already satisfied: python-dateutil>=2.5.0 in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from pandas->coffea==0.7.14) (2.8.0)
+Requirement already satisfied: pytz>=2011k in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from pandas->coffea==0.7.14) (2019.1)
+Requirement already satisfied: awkward0 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from uproot3>=3.14.1->coffea==0.7.14) (0.15.5)
+Requirement already satisfied: rich in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from correctionlib>=2.0.0->coffea==0.7.14) (12.2.0)
+Requirement already satisfied: pydantic>=1.7.3 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from correctionlib>=2.0.0->coffea==0.7.14) (1.9.0)
+Requirement already satisfied: cycler>=0.10 in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from matplotlib>=3->coffea==0.7.14) (0.10.0)
+Requirement already satisfied: kiwisolver>=1.0.1 in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from matplotlib>=3->coffea==0.7.14) (1.0.1)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from matplotlib>=3->coffea==0.7.14) (2.4.0)
+Requirement already satisfied: importlib-resources; python_version < "3.7" in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from tqdm>=4.27.0->coffea==0.7.14) (1.0.2)
+Requirement already satisfied: llvmlite<0.37,>=0.36.0rc1 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from numba>=0.50.0->coffea==0.7.14) (0.36.0)
+Requirement already satisfied: requests~=2.21 in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from mplhep>=0.1.18->coffea==0.7.14) (2.22.0)
+Requirement already satisfied: six in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from packaging->coffea==0.7.14) (1.12.0)
+Requirement already satisfied: uhi>=0.2.1 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from histoprint>=1.6->hist>=2->coffea==0.7.14) (0.3.1)
+Requirement already satisfied: click>=7.0.0 in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from histoprint>=1.6->hist>=2->coffea==0.7.14) (7.0)
+Requirement already satisfied: commonmark<0.10.0,>=0.9.0 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from rich->correctionlib>=2.0.0->coffea==0.7.14) (0.9.1)
+Requirement already satisfied: pygments<3.0.0,>=2.6.0 in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (from rich->correctionlib>=2.0.0->coffea==0.7.14) (2.11.2)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from requests~=2.21->mplhep>=0.1.18->coffea==0.7.14) (3.0.4)
+Requirement already satisfied: idna<2.9,>=2.5 in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from requests~=2.21->mplhep>=0.1.18->coffea==0.7.14) (2.8)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from requests~=2.21->mplhep>=0.1.18->coffea==0.7.14) (1.25.3)
+Requirement already satisfied: certifi>=2017.4.17 in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from requests~=2.21->mplhep>=0.1.18->coffea==0.7.14) (2019.3.9)
+Collecting https://github.com/nsmith-/rhalphalib/archive/master.zip
+  Using cached https://github.com/nsmith-/rhalphalib/archive/master.zip
+Requirement already satisfied (use --upgrade to upgrade): rhalphalib==0.1.3 from https://github.com/nsmith-/rhalphalib/archive/master.zip in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages
+Requirement already satisfied: numpy>=1.14 in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from rhalphalib==0.1.3) (1.16.4)
+Requirement already satisfied: scipy in /cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages (from rhalphalib==0.1.3) (1.3.0)
+Building wheels for collected packages: rhalphalib
+  Building wheel for rhalphalib (setup.py): started
+  Building wheel for rhalphalib (setup.py): finished with status 'done'
+  Stored in directory: /tmp/pip-ephem-wheel-cache-9e5k4cww/wheels/51/f5/33/d876e55d2226c91044a5ae9a44ba08f6efab0ed70a25fd9397
+Successfully built rhalphalib
+Requirement already satisfied: xxhash in /storage_mnt/storage/user/vannerom/.local/lib/python3.6/site-packages (3.0.0)
+/user/vannerom/MET/decafMET/analysis:/user/vannerom/.local/lib/python3.6/site-packages:/cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib:/cvmfs/sft.cern.ch/lcg/views/LCG_96python3/x86_64-centos7-gcc8-opt/lib/python3.6/site-packages
+EGamma2018A
+  Preprocessing 100% ━━━━━━━━━━━━━━ 224/224 [ 0:05:47 < 0:00:00 | 0.9   file/s ]
+Merging (local) 100% ━━━━━━━━━━━━━━ 224/224 [ 0:05:47 < 0:00:00 | ?   merges/s ]
+     Processing   3%               109/3366 [ 0:07:11 < 2:49:02 | 0.3  chunk/s ]
+Merging (local) 100% ━━━━━━━━━━━━━  108/108 [ 0:07:10 < 0:00:00 | ?   merges/s ]

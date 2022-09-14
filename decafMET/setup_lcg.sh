@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source env_lcg.sh
+source /user/vannerom/MET/decafMET/env_lcg.sh
 
 #pip install --user coffea==0.6.37
 pip install --user coffea==0.7.14

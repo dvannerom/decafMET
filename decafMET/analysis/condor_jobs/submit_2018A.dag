@@ -1,0 +1,3 @@
+JOB  2018A /user/vannerom/MET/decafMET/analysis/condor_jobs/submit.condor
+VARS 2018A jsonFile="/user/vannerom/MET/decafMET/analysis/data/EGamma2018A_noBadFile.json"
+RETRY all_nodes 2

@@ -1,0 +1,14 @@
+000 (149033.000.000) 2022-08-08 15:34:56 Job submitted from host: <192.168.10.147:9618?addrs=192.168.10.147-9618&alias=schedd03.wn.iihe.ac.be&noUDP&sock=schedd_29690_72ef>
+...
+001 (149033.000.000) 2022-08-08 15:34:56 Job executing on host: <192.168.10.147:9618?addrs=192.168.10.147-9618&alias=schedd03.wn.iihe.ac.be&noUDP&sock=schedd_29690_72ef>
+...
+004 (149033.000.000) 2022-08-10 18:22:40 Job was evicted.
+	(0) CPU times
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+...
+009 (149033.000.000) 2022-08-10 18:22:40 Job was aborted.
+	via condor_rm (by user vannerom)
+...

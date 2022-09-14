@@ -1,0 +1,10 @@
+executable   = /user/vannerom/MET/decafMET/analysis/condor_jobs/submit.sh
+arguments    = "/user/vannerom/MET/decafMET/analysis/data/SinglePhoton2016B_ver1.json"
+
+should_transfer_files = NO
+
+output       = /user/vannerom/MET/decafMET/analysis/condor_log/job_$(cluster).out
+error        = /user/vannerom/MET/decafMET/analysis/condor_log/job_$(cluster).err
+log          = /user/vannerom/MET/decafMET/analysis/condor_log/job_$(cluster).log
+
+queue
