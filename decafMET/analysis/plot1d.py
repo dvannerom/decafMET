@@ -55,6 +55,11 @@ def xsec(inFile):
 	elif inFile == 'WGJets_PtG-40To130.root': return 19.75
 	elif inFile == 'WGJets_PtG-130.root': return 0.8099
 	elif inFile == 'WJetsToLNu.root': return 67350.0
+	elif inFile == 'DY.root': return 6077.22
+	elif inFile == 'TT.root': return 88.29 
+	elif inFile == 'WW.root': return 118.7
+	elif inFile == 'WZ.root': return 22.82
+	elif inFile == 'ZZ.root': return 10.32
 	else: print('Invalid sample')
 
 def histoMC(inFileName,var):
@@ -64,7 +69,8 @@ def histoMC(inFileName,var):
 	nEvents = (inFile.Get("nEvents")).GetEntries()
 	histo.SetDirectory(0)
 	inFile.Close()
-	histo.Scale(xsec(inFileName.split('/')[1])/nEvents)
+	#histo.Scale(xsec(inFileName.split('/')[1])/nEvents)
+	histo.Scale(xsec(inFileName.split('/')[2])/nEvents)
 	return histo
 
 # Define input arguments
@@ -80,56 +86,73 @@ var = args.var
 # Data
 dataFile = ROOT.TFile.Open(inputFile,"READ")
 h_data = dataFile.Get(var)
-# GJets
-h_GJets_HT40To100 = histoMC('results/GJets_HT-40To100.root',var)
-h_GJets_HT100To200 = histoMC('results/GJets_HT-100To200.root',var)
-h_GJets_HT200To400 = histoMC('results/GJets_HT-200To400.root',var)
-h_GJets_HT400To600 = histoMC('results/GJets_HT-400To600.root',var)
-# QCD
-h_QCD_HT100To200 = histoMC('results/QCD_HT-100To200.root',var)
-h_QCD_HT200To300 = histoMC('results/QCD_HT-200To300.root',var)
-h_QCD_HT300To500 = histoMC('results/QCD_HT-300To500.root',var)
-h_QCD_HT500To700 = histoMC('results/QCD_HT-500To700.root',var)
-h_QCD_HT700To1000 = histoMC('results/QCD_HT-700To1000.root',var)
-h_QCD_HT1000To1500 = histoMC('results/QCD_HT-1000To1500.root',var)
-h_QCD_HT1500To2000 = histoMC('results/QCD_HT-1500To2000.root',var)
-h_QCD_HT2000ToInf = histoMC('results/QCD_HT-2000ToInf.root',var)
-# Subdominant BG
-h_TTGJets = histoMC('results/TTGJets.root',var)
-h_TGJets = histoMC('results/TGJets.root',var)
-h_WGJets_PtG40To130 = histoMC('results/WGJets_PtG-40To130.root',var)
-h_WGJets_PtG130 = histoMC('results/WGJets_PtG-130.root',var)
-h_WJetsToLNu = histoMC('results/WJetsToLNu.root',var)
+### Bkg for GJets
+## GJets
+#h_GJets_HT40To100 = histoMC('results/GJets_HT-40To100.root',var)
+#h_GJets_HT100To200 = histoMC('results/GJets_HT-100To200.root',var)
+#h_GJets_HT200To400 = histoMC('results/GJets_HT-200To400.root',var)
+#h_GJets_HT400To600 = histoMC('results/GJets_HT-400To600.root',var)
+## QCD
+#h_QCD_HT100To200 = histoMC('results/QCD_HT-100To200.root',var)
+#h_QCD_HT200To300 = histoMC('results/QCD_HT-200To300.root',var)
+#h_QCD_HT300To500 = histoMC('results/QCD_HT-300To500.root',var)
+#h_QCD_HT500To700 = histoMC('results/QCD_HT-500To700.root',var)
+#h_QCD_HT700To1000 = histoMC('results/QCD_HT-700To1000.root',var)
+#h_QCD_HT1000To1500 = histoMC('results/QCD_HT-1000To1500.root',var)
+#h_QCD_HT1500To2000 = histoMC('results/QCD_HT-1500To2000.root',var)
+#h_QCD_HT2000ToInf = histoMC('results/QCD_HT-2000ToInf.root',var)
+## Subdominant BG
+#h_TTGJets = histoMC('results/TTGJets.root',var)
+#h_TGJets = histoMC('results/TGJets.root',var)
+#h_WGJets_PtG40To130 = histoMC('results/WGJets_PtG-40To130.root',var)
+#h_WGJets_PtG130 = histoMC('results/WGJets_PtG-130.root',var)
+#h_WJetsToLNu = histoMC('results/WJetsToLNu.root',var)
+#
+#### Define summed histograms
+## GJets
+#h_GJets = h_GJets_HT40To100.Clone("GJets")
+#h_GJets.SetDirectory(0)
+#h_GJets.Add(h_GJets_HT100To200)
+#h_GJets.Add(h_GJets_HT200To400)
+#h_GJets.Add(h_GJets_HT400To600)
+## QCD
+#h_QCD = h_QCD_HT100To200.Clone()
+#h_QCD.SetDirectory(0)
+#h_QCD.Add(h_QCD_HT200To300)
+#h_QCD.Add(h_QCD_HT300To500)
+#h_QCD.Add(h_QCD_HT500To700)
+#h_QCD.Add(h_QCD_HT700To1000)
+#h_QCD.Add(h_QCD_HT1000To1500)
+#h_QCD.Add(h_QCD_HT1500To2000)
+#h_QCD.Add(h_QCD_HT2000ToInf)
+## Sum top and V
+#h_TopV = h_TTGJets.Clone()
+#h_TopV.SetDirectory(0)
+#h_TopV.Add(h_TGJets)
+#h_TopV.Add(h_WGJets_PtG40To130)
+#h_TopV.Add(h_WGJets_PtG130)
 
-### Define summed histograms
-# GJets
-h_GJets = h_GJets_HT40To100.Clone("GJets")
-h_GJets.SetDirectory(0)
-h_GJets.Add(h_GJets_HT100To200)
-h_GJets.Add(h_GJets_HT200To400)
-h_GJets.Add(h_GJets_HT400To600)
-# QCD
-h_QCD = h_QCD_HT100To200.Clone()
-h_QCD.SetDirectory(0)
-h_QCD.Add(h_QCD_HT200To300)
-h_QCD.Add(h_QCD_HT300To500)
-h_QCD.Add(h_QCD_HT500To700)
-h_QCD.Add(h_QCD_HT700To1000)
-h_QCD.Add(h_QCD_HT1000To1500)
-h_QCD.Add(h_QCD_HT1500To2000)
-h_QCD.Add(h_QCD_HT2000ToInf)
-# Sum top and V
-h_TopV = h_TTGJets.Clone()
-h_TopV.SetDirectory(0)
-h_TopV.Add(h_TGJets)
-h_TopV.Add(h_WGJets_PtG40To130)
-h_TopV.Add(h_WGJets_PtG130)
+### Bkg for DY
+# DY
+h_DY = histoMC('results/2022/DY.root',var)
+# TT
+h_TT = histoMC('results/2022/TT.root',var)
+# VV
+h_WW = histoMC('results/2022/WW.root',var)
+h_WZ = histoMC('results/2022/WZ.root',var)
+h_ZZ = histoMC('results/2022/ZZ.root',var)
+h_VV = h_WW.Clone("VV")
+h_VV.SetDirectory(0)
+h_VV.Add(h_WW)
+h_VV.Add(h_WZ)
+h_VV.Add(h_ZZ)
 
 # Drawing
 tdrstyle.setTDRStyle()
 
 #change the CMS_lumi variables (see CMS_lumi.py)
-CMS_lumi.lumi_13TeV = "7.6 fb^{-1}"
+CMS_lumi.lumi_13TeV = "4.38 fb^{-1}" # 2022C
+#CMS_lumi.lumi_13TeV = "1.82 fb^{-1}" # 2022D
 CMS_lumi.writeExtraText = 1
 CMS_lumi.extraText = "Preliminary"
 CMS_lumi.lumi_sqrtS = "13 TeV" # used with iPeriod = 0, e.g. for simulation-only plots (default is an empty string)
@@ -181,51 +204,89 @@ yAxis = h1.GetYaxis()
 yAxis.SetNdivisions(6,5,0)
 yAxis.SetTitleOffset(1)
 
-h_MC_tot = h_GJets.Clone()
-h_MC_tot.SetDirectory(0)
-h_MC_tot.Add(h_QCD)
-h_MC_tot.Add(h_WJetsToLNu)
-h_MC_tot.Add(h_TopV)
-print('% of GJets = '+str(h_GJets.Integral()/h_MC_tot.Integral()))
-print('% of QCD = '+str(h_QCD.Integral()/h_MC_tot.Integral()))
-print('% of WJetsToLNu = '+str(h_WJetsToLNu.Integral()/h_MC_tot.Integral()))
-print('% of TopV = '+str(h_TopV.Integral()/h_MC_tot.Integral()))
+#h_MC_tot = h_GJets.Clone()
+#h_MC_tot.SetDirectory(0)
+#h_MC_tot.Add(h_QCD)
+#h_MC_tot.Add(h_WJetsToLNu)
+#h_MC_tot.Add(h_TopV)
+#print('% of GJets = '+str(h_GJets.Integral()/h_MC_tot.Integral()))
+#print('% of QCD = '+str(h_QCD.Integral()/h_MC_tot.Integral()))
+#print('% of WJetsToLNu = '+str(h_WJetsToLNu.Integral()/h_MC_tot.Integral()))
+#print('% of TopV = '+str(h_TopV.Integral()/h_MC_tot.Integral()))
 
-lumi = 7576.262111 # pb^-1
-h_GJets.SetBinContent(h_GJets.GetNbinsX(),h_GJets.GetBinContent(h_GJets.GetNbinsX())+h_GJets.GetBinContent(h_GJets.GetNbinsX()+1))
-h_GJets.SetBinContent(1,h_GJets.GetBinContent(1)+h_GJets.GetBinContent(0))
-#h_GJets.Scale(h_data.Integral()/h_MC_tot.Integral(),"width")
-h_GJets.Scale(lumi,"width")
-h_GJets.SetFillColor(ROOT.kYellow - 7)
-h_GJets.SetLineColor(ROOT.kBlack)
-h_QCD.SetBinContent(h_QCD.GetNbinsX(),h_QCD.GetBinContent(h_QCD.GetNbinsX())+h_QCD.GetBinContent(h_QCD.GetNbinsX()+1))
-h_QCD.SetBinContent(1,h_QCD.GetBinContent(1)+h_QCD.GetBinContent(0))
-h_QCD.Scale(lumi,"width")
-h_QCD.SetFillColor(ROOT.kRed - 7)
-h_QCD.SetLineColor(ROOT.kBlack)
-h_TopV.SetBinContent(h_TopV.GetNbinsX(),h_TopV.GetBinContent(h_TopV.GetNbinsX())+h_TopV.GetBinContent(h_TopV.GetNbinsX()+1))
-h_TopV.SetBinContent(1,h_TopV.GetBinContent(1)+h_TopV.GetBinContent(0))
-h_TopV.Scale(lumi,"width")
-h_TopV.SetFillColor(ROOT.kCyan)
-h_TopV.SetLineColor(ROOT.kBlack)
-h_WJetsToLNu.SetBinContent(h_WJetsToLNu.GetNbinsX(),h_WJetsToLNu.GetBinContent(h_WJetsToLNu.GetNbinsX())+h_WJetsToLNu.GetBinContent(h_WJetsToLNu.GetNbinsX()+1))
-h_WJetsToLNu.SetBinContent(1,h_WJetsToLNu.GetBinContent(1)+h_WJetsToLNu.GetBinContent(0))
-h_WJetsToLNu.Scale(lumi,"width")
-h_WJetsToLNu.SetFillColor(ROOT.kGreen - 7)
-h_WJetsToLNu.SetLineColor(ROOT.kBlack)
+h_MC_tot = h_DY.Clone()
+h_MC_tot.SetDirectory(0)
+h_MC_tot.Add(h_TT)
+h_MC_tot.Add(h_VV)
+print('% of DY = '+str(h_DY.Integral()/h_MC_tot.Integral()))
+print('% of TT = '+str(h_TT.Integral()/h_MC_tot.Integral()))
+print('% of VV = '+str(h_VV.Integral()/h_MC_tot.Integral()))
+
+#lumi = 7576.262111 # pb^-1
+#h_GJets.SetBinContent(h_GJets.GetNbinsX(),h_GJets.GetBinContent(h_GJets.GetNbinsX())+h_GJets.GetBinContent(h_GJets.GetNbinsX()+1))
+#h_GJets.SetBinContent(1,h_GJets.GetBinContent(1)+h_GJets.GetBinContent(0))
+##h_GJets.Scale(h_data.Integral()/h_MC_tot.Integral(),"width")
+#h_GJets.Scale(lumi,"width")
+#h_GJets.SetFillColor(ROOT.kYellow - 7)
+#h_GJets.SetLineColor(ROOT.kBlack)
+#h_QCD.SetBinContent(h_QCD.GetNbinsX(),h_QCD.GetBinContent(h_QCD.GetNbinsX())+h_QCD.GetBinContent(h_QCD.GetNbinsX()+1))
+#h_QCD.SetBinContent(1,h_QCD.GetBinContent(1)+h_QCD.GetBinContent(0))
+#h_QCD.Scale(lumi,"width")
+#h_QCD.SetFillColor(ROOT.kRed - 7)
+#h_QCD.SetLineColor(ROOT.kBlack)
+#h_TopV.SetBinContent(h_TopV.GetNbinsX(),h_TopV.GetBinContent(h_TopV.GetNbinsX())+h_TopV.GetBinContent(h_TopV.GetNbinsX()+1))
+#h_TopV.SetBinContent(1,h_TopV.GetBinContent(1)+h_TopV.GetBinContent(0))
+#h_TopV.Scale(lumi,"width")
+#h_TopV.SetFillColor(ROOT.kCyan)
+#h_TopV.SetLineColor(ROOT.kBlack)
+#h_WJetsToLNu.SetBinContent(h_WJetsToLNu.GetNbinsX(),h_WJetsToLNu.GetBinContent(h_WJetsToLNu.GetNbinsX())+h_WJetsToLNu.GetBinContent(h_WJetsToLNu.GetNbinsX()+1))
+#h_WJetsToLNu.SetBinContent(1,h_WJetsToLNu.GetBinContent(1)+h_WJetsToLNu.GetBinContent(0))
+#h_WJetsToLNu.Scale(lumi,"width")
+#h_WJetsToLNu.SetFillColor(ROOT.kGreen - 7)
+#h_WJetsToLNu.SetLineColor(ROOT.kBlack)
+#h_stack = ROOT.THStack("h_stack","h_stack")
+#h_stack.Add(h_TopV)
+#h_stack.Add(h_WJetsToLNu)
+#h_stack.Add(h_QCD)
+#h_stack.Add(h_GJets)
+#h_stack.Draw("histsame")
+
+#lumi = 1821.504603 # pb^-1
+lumi = 4380. # pb^-1
+h_DY.SetBinContent(h_DY.GetNbinsX(),h_DY.GetBinContent(h_DY.GetNbinsX())+h_DY.GetBinContent(h_DY.GetNbinsX()+1))
+h_DY.SetBinContent(1,h_DY.GetBinContent(1)+h_DY.GetBinContent(0))
+#h_DY.Scale(h_data.Integral()/h_MC_tot.Integral(),"width")
+h_DY.Scale(lumi,"width")
+h_DY.SetFillColor(ROOT.kBlue)
+h_DY.SetLineColor(ROOT.kBlack)
+h_VV.SetBinContent(h_VV.GetNbinsX(),h_VV.GetBinContent(h_VV.GetNbinsX())+h_VV.GetBinContent(h_VV.GetNbinsX()+1))
+h_VV.SetBinContent(1,h_VV.GetBinContent(1)+h_VV.GetBinContent(0))
+#h_VV.Scale(h_data.Integral()/h_MC_tot.Integral(),"width")
+h_VV.Scale(lumi,"width")
+h_VV.SetFillColor(ROOT.kYellow)
+h_VV.SetLineColor(ROOT.kBlack)
+h_TT.SetBinContent(h_TT.GetNbinsX(),h_TT.GetBinContent(h_TT.GetNbinsX())+h_TT.GetBinContent(h_TT.GetNbinsX()+1))
+h_TT.SetBinContent(1,h_TT.GetBinContent(1)+h_TT.GetBinContent(0))
+#h_TT.Scale(h_data.Integral()/h_MC_tot.Integral(),"width")
+h_TT.Scale(lumi,"width")
+h_TT.SetFillColor(ROOT.kRed)
+h_TT.SetLineColor(ROOT.kBlack)
 h_stack = ROOT.THStack("h_stack","h_stack")
-h_stack.Add(h_TopV)
-h_stack.Add(h_WJetsToLNu)
-h_stack.Add(h_QCD)
-h_stack.Add(h_GJets)
+h_stack.Add(h_TT)
+h_stack.Add(h_VV)
+h_stack.Add(h_DY)
 h_stack.Draw("histsame")
 
 # Recompute total MC for ratio plot
-h_MC_tot_rescaled = h_GJets.Clone()
+#h_MC_tot_rescaled = h_GJets.Clone()
+#h_MC_tot_rescaled.SetDirectory(0)
+#h_MC_tot_rescaled.Add(h_QCD)
+#h_MC_tot_rescaled.Add(h_WJetsToLNu)
+#h_MC_tot_rescaled.Add(h_TopV)
+h_MC_tot_rescaled = h_DY.Clone()
 h_MC_tot_rescaled.SetDirectory(0)
-h_MC_tot_rescaled.Add(h_QCD)
-h_MC_tot_rescaled.Add(h_WJetsToLNu)
-h_MC_tot_rescaled.Add(h_TopV)
+h_MC_tot_rescaled.Add(h_TT)
+h_MC_tot_rescaled.Add(h_VV)
 
 h_data.SetBinContent(h_data.GetNbinsX(),h_data.GetBinContent(h_data.GetNbinsX())+h_data.GetBinContent(h_data.GetNbinsX()+1))
 h_data.SetBinContent(1,h_data.GetBinContent(1)+h_data.GetBinContent(0))
@@ -237,7 +298,8 @@ h_data.SetMarkerStyle(20)
 
 h1.SetMaximum(30*h_data.GetMaximum())
 #h1.SetMinimum(0.1*h_data.GetMinimum())
-h1.SetMinimum(h_TopV.GetMinimum())
+#h1.SetMinimum(h_TopV.GetMinimum())
+h1.SetMinimum(max(1e-02,h_VV.GetMinimum()))
 
 #draw the lumi text on the canvas
 CMS_lumi.CMS_lumi(pad1, iPeriod, iPos)
@@ -255,11 +317,14 @@ leg.SetFillStyle(0)
 leg.SetTextFont(42)
 leg.SetTextSize(0.04)
 #leg.SetHeader("2016G","C");
-leg.AddEntry(h_data,"Data (2016G)","lep")
-leg.AddEntry(h_GJets,"#gamma + jets","f")
-leg.AddEntry(h_QCD,"QCD","f")
-leg.AddEntry(h_WJetsToLNu,"W(l#nu) + jets","f")
-leg.AddEntry(h_TopV,"Top + #gamma, V + #gamma","f")
+leg.AddEntry(h_data,"Data","lep")
+#leg.AddEntry(h_GJets,"#gamma + jets","f")
+#leg.AddEntry(h_QCD,"QCD","f")
+#leg.AddEntry(h_WJetsToLNu,"W(l#nu) + jets","f")
+#leg.AddEntry(h_TopV,"Top + #gamma, V + #gamma","f")
+leg.AddEntry(h_DY,"Drell-Yan","f")
+leg.AddEntry(h_VV,"VV","f")
+leg.AddEntry(h_TT,"t#bar{t}","f")
 leg.Draw()
 
 canvas.cd()
