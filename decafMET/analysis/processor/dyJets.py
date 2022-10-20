@@ -35,9 +35,9 @@ def prescale(events):
 def dyJetsSelection(events):
 	nEvents = len(events)
 
-	# Apply golden json
-	lumiMask = LumiMask("data/2022_golden.json")
-	events = events[lumiMask(events.run,events.luminosityBlock)]
+#	# Apply golden json
+#	lumiMask = LumiMask("data/2022_golden.json")
+#	events = events[lumiMask(events.run,events.luminosityBlock)]
 
 	nEvents_lumi = len(events)
 
@@ -108,8 +108,9 @@ def dyJetsSelection(events):
 	)
 	Zboson = leadingMuon + subleadingMuon
 	pv = events.PV
-	met_raw = events.RawMET
+	met_pf_raw = events.RawMET
 	met_pf = events.MET
+	met_puppi_raw = events.RawPuppiMET
 	met_puppi = events.PuppiMET
 	
 	# Retrieve prescale
@@ -119,6 +120,6 @@ def dyJetsSelection(events):
 	dyDict = {'events': events,
               'nEvents_tot': nEvents,
               'nEvents_lumi': nEvents_lumi, 'nEvents_filters': nEvents_filters, 'nEvents_trigger': nEvents_trigger, 'nEvents_npv': nEvents_npv, 'nEvents_muon': nEvents_muon,
-              'weights': weights, 'boson': Zboson, 'pv': pv, 'met_raw': met_raw, 'met_pf': met_pf, 'met_puppi': met_puppi}
+              'weights': weights, 'boson': Zboson, 'pv': pv, 'met_pf_raw': met_pf_raw, 'met_pf': met_pf, 'met_puppi_raw': met_puppi_raw, 'met_puppi': met_puppi}
 	
 	return dyDict

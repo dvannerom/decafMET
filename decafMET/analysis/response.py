@@ -23,52 +23,49 @@ def response(histo):
 if __name__ == '__main__':
 	# Define input arguments
 	parser = argparse.ArgumentParser(description='Plot the selected quantity for the selected particle')
+	parser.add_argument('--isData', action='store_true')
 	parser.add_argument('-i', '--inputFile', type=str, default='', help='Input data file')
 	parser.add_argument('-d', '--dataset', type=str, default='gamma', help='gamma or dy')
 	parser.add_argument('-r', '--run', type=str, default='2022D', help='Data taking run')
+	parser.add_argument('-v', '--variable', type=str, default='qt', help='qt or pv')
 	args = parser.parse_args()
-	
+
+	isData = args.isData	
 	dataset = args.dataset
 	inputFile = args.inputFile
 	run = args.run
+	variable = args.variable
 	
 	inFile = ROOT.TFile.Open(inputFile,"READ")
 	
-	#h_response_raw_vs_qt = inFile.Get("response_raw_vs_qt")
-	#h_response_pf_vs_qt = inFile.Get("response_pf_vs_qt")
-	#h_response_puppi_vs_qt = inFile.Get("response_puppi_vs_qt")
-	h_response_raw_vs_qt = inFile.Get("response_raw_vs_qt")
-	h_response_pf_vs_qt = inFile.Get("response_pf_JECCorr_vs_qt")
-	h_response_puppi_vs_qt = inFile.Get("response_puppi_JECCorr_vs_qt")
+	h_response_pf_raw = inFile.Get("response_pf_raw_vs_"+variable)
+	h_response_pf = inFile.Get("response_pf_JECCorr_vs_"+variable)
+	h_response_puppi_raw = inFile.Get("response_puppi_raw_vs_"+variable)
+	h_response_puppi = inFile.Get("response_puppi_JECCorr_vs_"+variable)
 	
-	response_raw = response(h_response_raw_vs_qt)
-	response_pf = response(h_response_pf_vs_qt)
-	response_puppi = response(h_response_puppi_vs_qt)
-
-#	h_response_raw_vs_pv = inFile.Get("response_raw_vs_pv")
-#	h_response_pf_vs_pv = inFile.Get("response_pf_vs_pv")
-#	h_response_puppi_vs_pv = inFile.Get("response_puppi_vs_pv")
-#	
-#	response_raw = response(h_response_raw_vs_pv)
-#	response_pf = response(h_response_pf_vs_pv)
-#	response_puppi = response(h_response_puppi_vs_pv)
+	response_pf_raw = response(h_response_pf_raw)
+	response_pf = response(h_response_pf)
+	response_puppi_raw = response(h_response_puppi_raw)
+	response_puppi = response(h_response_puppi)
 	
 	# Drawing
 	tdrstyle.setTDRStyle()
 	
 	#change the CMS_lumi variables (see CMS_lumi.py)
 #	CMS_lumi.lumi_13TeV = "1.82 fb^{-1}"
-	CMS_lumi.lumi_13TeV = "4.38 fb^{-1}"
+	if isData: CMS_lumi.lumi_13p6TeV = "4.38 fb^{-1}"
 	CMS_lumi.writeExtraText = 1
-	CMS_lumi.extraText = "Preliminary"
-	CMS_lumi.lumi_sqrtS = "13 TeV" # used with iPeriod = 0, e.g. for simulation-only plots (default is an empty string)
+	if isData: CMS_lumi.extraText = "Preliminary"
+	else: CMS_lumi.extraText = "Simulation Preliminary"
+	CMS_lumi.lumi_sqrtS = "13.6 TeV" # used with iPeriod = 0, e.g. for simulation-only plots (default is an empty string)
 	
 	iPos = 11
 	
-	iPeriod = 4
+	iPeriod = 0
+	if isData: iPeriod = 5
 	
-	H_ref = 650 
-	W_ref = 800 
+	H_ref = 700 
+	W_ref = 850 
 	W = W_ref
 	H  = H_ref
 	
@@ -93,30 +90,36 @@ if __name__ == '__main__':
 	ROOT.gStyle.SetLegendBorderSize(0)
 	ROOT.gStyle.SetOptStat(0)
 	
-	xAxis = response_raw.GetXaxis()
+	xAxis = response_pf_raw.GetXaxis()
 	xAxis.SetNdivisions(6,5,0)
 	
-	yAxis = response_raw.GetYaxis()
+	yAxis = response_pf_raw.GetYaxis()
 	yAxis.SetNdivisions(6,5,0)
 	yAxis.SetTitleOffset(1)
 	
-	response_raw.Draw("APZ")
-	response_raw.SetMarkerStyle(20)
-	#response_raw.SetMinimum(0.7)
-	response_raw.SetMinimum(0)
-	response_raw.SetMaximum(1.45)
-	response_raw.GetXaxis().SetTitle("q_{T} (GeV)")
-	response_raw.GetYaxis().SetTitle("-<u_{#parallel}/q_{T}>")
+	response_pf_raw.Draw("APZ")
+	response_pf_raw.SetLineColor(ROOT.kBlue)
+	response_pf_raw.SetMarkerColor(ROOT.kBlue)
+	response_pf_raw.SetMarkerStyle(21)
+	#response_pf_raw.SetMinimum(0.3)
+	#response_pf_raw.SetMaximum(1.25)
+	response_pf_raw.GetXaxis().SetTitle("q_{T} (GeV)")
+	response_pf_raw.GetYaxis().SetTitle("-<u_{#parallel}/q_{T}>")
 	
 	response_pf.Draw("PZ")
 	response_pf.SetLineColor(ROOT.kBlue)
 	response_pf.SetMarkerColor(ROOT.kBlue)
-	response_pf.SetMarkerStyle(21)
+	response_pf.SetMarkerStyle(20)
 	
+	response_puppi_raw.Draw("PZ")
+	response_puppi_raw.SetLineColor(ROOT.kRed)
+	response_puppi_raw.SetMarkerColor(ROOT.kRed)
+	response_puppi_raw.SetMarkerStyle(21)
+
 	response_puppi.Draw("PZ")
 	response_puppi.SetLineColor(ROOT.kRed)
 	response_puppi.SetMarkerColor(ROOT.kRed)
-	response_puppi.SetMarkerStyle(22)
+	response_puppi.SetMarkerStyle(20)
 	
 	#draw the lumi text on the canvas
 	CMS_lumi.CMS_lumi(canvas, iPeriod, iPos)
@@ -126,8 +129,15 @@ if __name__ == '__main__':
 	canvas.RedrawAxis()
 	frame = canvas.GetFrame()
 	frame.Draw()
+
+	latex = ROOT.TLatex()
+	latex.SetTextFont(42)
+	latex.SetTextSize(0.04)
+	#latex.SetTextAlign(13);  //align at top
+	if isData: latex.DrawLatexNDC(.3,.35,"#bf{#mu#mu} channel")
+	else: latex.DrawLatexNDC(.3,.35,"DY(#bf{#mu#mu}) channel")
 	
-	leg = ROOT.TLegend(.73,.7,.9,.9)
+	leg = ROOT.TLegend(.58,.25,.83,.48)
 	leg.SetBorderSize(0)
 	leg.SetFillColor(0)
 	leg.SetFillStyle(0)
@@ -137,9 +147,10 @@ if __name__ == '__main__':
 	#elif dataset == "dy": leg.SetHeader("Drell-Yan ("+run+")","C");
 	#if dataset == "gamma": leg.SetHeader("#gamma+jets","C");
 	#elif dataset == "dy": leg.SetHeader("Drell-Yan","C");
-	leg.AddEntry(response_puppi,"Puppi p_{T}^{miss}","lep")
-	leg.AddEntry(response_pf,"PF p_{T}^{miss}","lep")
-	leg.AddEntry(response_raw,"Raw p_{T}^{miss}","lep")
+	leg.AddEntry(response_puppi,"Type-I Puppi p_{T}^{miss}","lep")
+	leg.AddEntry(response_puppi_raw,"Raw Puppi p_{T}^{miss}","lep")
+	leg.AddEntry(response_pf,"Type-I PF p_{T}^{miss}","lep")
+	leg.AddEntry(response_pf_raw,"Raw PF p_{T}^{miss}","lep")
 	leg.Draw()
 	
 	canvas.SaveAs("plots/response.png")
